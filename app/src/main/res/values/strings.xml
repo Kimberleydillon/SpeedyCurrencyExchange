@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Speedy Currency Exchange</string>
+    <string name="base">Base Currency</string>
+    <string name="currency_1">Currency 1</string>
+    <string name="currency_2">Currency 2</string>
+    <string name="continue_button">Continue</string>
+    <string name="start_test">Start Test</string>
+</resources>
