@@ -23,10 +23,16 @@ public class InputCurrencyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_currency);
 
+
         base_input = findViewById(R.id.base_input);
         currency1_input = findViewById(R.id.currency_1_input);
         currency2_input = findViewById(R.id.currency_2_input);
         continueButton = findViewById(R.id.continue_button);
+
+        if (base_input.getText() != null) {
+            Intent skipMainActivity = new Intent(InputCurrencyActivity.this, CurrencyResultsActivity.class);
+            InputCurrencyActivity.this.startActivity(skipMainActivity);
+        }
 
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
