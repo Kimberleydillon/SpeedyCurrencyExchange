@@ -11,28 +11,29 @@ public class InputCurrencyActivity extends AppCompatActivity {
     String base;
     String currency1;
     String currency2;
-
-    EditText baseInput;
-    EditText currency1Input;
-    EditText currency2Input;
+    EditText base_input;
+    EditText currency1_input;
+    EditText currency2_input;
     Button continueButton;
+
+    private static final String BASE_KEY = "Base_Key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_currency);
 
-        baseInput = findViewById(R.id.base_input);
-        currency1Input = findViewById(R.id.currency_1_input);
-        currency2Input = findViewById(R.id.currency_2_input);
+        base_input = findViewById(R.id.base_input);
+        currency1_input = findViewById(R.id.currency_1_input);
+        currency2_input = findViewById(R.id.currency_2_input);
         continueButton = findViewById(R.id.continue_button);
 
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                base = baseInput.getText().toString();
-                currency1 = currency1Input.getText().toString();
-                currency2 = currency2Input.getText().toString();
+                base = base_input.getText().toString();
+                currency1 = currency1_input.getText().toString();
+                currency2 = currency2_input.getText().toString();
 
                 Intent sendCurrencyInput = new Intent(InputCurrencyActivity.this, CurrencyResultsActivity.class);
 
@@ -46,5 +47,6 @@ public class InputCurrencyActivity extends AppCompatActivity {
         });
 
     }
+
 
 }
